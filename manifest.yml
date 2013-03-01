@@ -1,7 +1,7 @@
 ---
 applications:
   .:
-    name: koala
+    name: scottiess  
     framework:
       name: rails3
       info:
@@ -9,11 +9,9 @@ applications:
         description: Rails Application
         exec: 
     infra: ap-aws
-    url: ${name}.${target-base}
-    mem: 256M
+    url: scotties.ap01.aws.af.cm
+    mem: 2G
     instances: 1
     services:
       apas-mysql-79917:
-        type: mysql
-      mysql-74cfb:
         type: mysql
