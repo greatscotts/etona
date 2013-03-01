@@ -1,0 +1,19 @@
+---
+applications:
+  .:
+    name: koala
+    framework:
+      name: rails3
+      info:
+        mem: 256M
+        description: Rails Application
+        exec: 
+    infra: ap-aws
+    url: ${name}.${target-base}
+    mem: 256M
+    instances: 1
+    services:
+      apas-mysql-79917:
+        type: mysql
+      mysql-74cfb:
+        type: mysql

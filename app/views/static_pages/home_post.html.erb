@@ -1,0 +1,47 @@
+<% if signed_in? %>
+<LINK REL="SHORTCUT ICON" HREF="http://www.kiido.ph/favicon.ico">
+  <body id="max">
+  <div class="row mgin mgn">
+    <szs><b>Post</b></szs>
+  </br>
+</br>
+      <section>
+        <!--%= render 'shared/micropost_form' %-->
+        <%= render 'shared/post_form' %>
+      </section>
+    
+  </div>
+</body>
+<% else %>
+  <body id="max">
+<div class="rows mgin">
+<div class="span4 offset3">
+    <em><b>Sign in</b></em>
+  </br>
+</br>
+</br>
+</br>
+    <%= form_for(:sessionss, :url=> '/posts') do |f| %>
+
+      <%= f.label :username%>
+      <%= f.text_field :username %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+     <alignleft> <%= f.submit "Sign in", :class=> "btn btn-large btn-primary" %>
+    <% end %>
+      </br>
+    </br>
+  </br>
+ </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br></div>
+</body>
+<% end %>

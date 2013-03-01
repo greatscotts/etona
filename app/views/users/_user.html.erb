@@ -1,0 +1,12 @@
+<span>
+<div id="boxed">
+<ul>
+<%= link_to (image_tag user.image, :size => "200x200", :id=>"userpicture"), user %></br>
+<center><%= link_to user.name, user %></center>
+<% if current_user.admin? && !current_user?(user) %>
+  | <%= link_to "delete", user, :method=> :delete,
+    :data=> { :confirm=> "You sure??" } %>
+<% end %>
+</ul>
+</div>
+</span>

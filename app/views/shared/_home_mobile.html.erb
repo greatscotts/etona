@@ -1,0 +1,31 @@
+<body id="max">
+<div class="rows mgin">
+<div class="span4 offset3">
+    <em><b>Sign in</b></em>
+  </br>
+</br>
+</br>
+</br>
+    <%= form_for(:sessions, :url=> '/enter') do |f| %>
+
+      <%= f.label :username%>
+      <%= f.text_field :username %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+     <alignleft> <%= f.submit "Sign in", :class=> "btn btn-large btn-primary" %>
+    <% end %>
+      </br>
+    </br>
+  </br>
+ </div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br></div>
+</body>
